@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebenslauf - Ing. Mauricio Mora, MSc.</title>
+    <title>CV - Ing. Mauricio Mora, MSc.</title>
     <style>
         :root {
             --main-blue: #007bff;
@@ -208,6 +208,20 @@
             background-color: rgba(255, 255, 255, 0.1);
             color: var(--main-blue);
         }
+        /* Styles for the flag images */
+        .inline-flag-icon {
+            width: 24px; /* Adjust size as needed for the main flag display */
+            height: 24px;
+            object-fit: contain;
+            vertical-align: middle; /* Align with text if any */
+        }
+        .dropdown-flag-icon {
+            width: 20px; /* Adjust size for dropdown items */
+            height: 20px;
+            object-fit: contain;
+            vertical-align: middle;
+        }
+
 
         /* Desktop specific styles */
         @media (min-width: 768px) {
@@ -721,7 +735,8 @@
         }
     </style>
 </head>
-<body>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx BODY xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<body lang="de">
     <div class="fixed-action-buttons">
         <div class="button-with-dropdown-wrapper">
             <button id="menu-toggle-btn" class="hexagon-btn" aria-label="Menü umschalten" aria-expanded="false">
@@ -738,7 +753,7 @@
                     <li><a href="#skills" class="nav-link">Kenntnisse</a></li>
                     <li><a href="#experience" class="nav-link">Berufserfahrung</a></li>
                     <li><a href="#education" class="nav-link">Ausbildung</a></li>
-                    <li><a href="#complementary-education" class="nav-link">Weiterbildung</a></li>
+                    <li><a href="#complementary-education" class="nav-link">Zusätzliche Ausbildung</a></li>
                     <li><a href="#projects" class="nav-link">Projekte</a></li>
                     <li><a href="#contact" class="nav-link">Kontakt</a></li>
                 </ul>
@@ -748,7 +763,7 @@
         <!-- New Language Switcher Container -->
         <div class="button-with-dropdown-wrapper">
             <button id="language-toggle-btn" class="hexagon-btn" aria-label="Sprache wechseln">
-                <span id="current-flag">🇦🇹</span>
+                <span id="current-flag"></span><!-- Wird geleert, damit JS das Bild einfügen kann -->
             </button>
             <div class="language-dropdown-menu">
                 <!-- Language options will be dynamically inserted here by JavaScript -->
@@ -756,7 +771,6 @@
             </div>
         </div>
         <!-- End Language Switcher Container -->
-
         <div class="button-wrapper">
             <button id="print-btn" class="hexagon-btn" aria-label="Lebenslauf drucken">
                 <svg viewBox="0 0 576 512" fill="currentColor">
@@ -765,22 +779,22 @@
             </button>
         </div>
     </div>
-    <button id="back-to-top-btn" class="hexagon-btn" aria-label="Nach oben scrollen">
+    <button id="back-to-top-btn" class="hexagon-btn" aria-label="Nach oben">
         <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
         </svg>
     </button>
-
+    
     <header id="home">
         <div class="hexagon-bg" id="hexagon-container"></div>
         <div class="header-inner-content">
             <!-- Das Profilbild wurde auf den vom Benutzer bereitgestellten Pfad aktualisiert. -->
-            <!-- Falls dieses Bild nicht geladen wird, stellen Sie bitte sicher, dass 'Img/Bild Mauricio Mora.jpg' eine öffentlich zugängliche URL ist. -->
-            <img src="Img/Bild Mauricio Mora.jpg" alt="Profilfoto Mauricio Mora" class="profile-photo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/a3a3a3/ffffff?text=MM'; this.alt='Profilfoto nicht verfügbar';">
+            <!-- Falls dieses Bild nicht geladen wird, stellen Sie bitte sicher, dass 'Img/Bild Mauricio Mora.jpg' una públicamente accesible URL ist. -->
+            <img src="Img/Bild Mauricio Mora.jpg" alt="Profilbild Mauricio Mora" class="profile-photo" onerror="this.onerror=null;this.src='https://placehold.co/150x150/a3a3a3/ffffff?text=MM';this.alt='Profilbild nicht verfügbar';">
             <h1>Ing. Mauricio Mora, MSc.</h1>
             <p class="title">Spezialist für Automatisierung und Projektmanagement</p>
             <p class="header-description">
-                Neue Herausforderungen sehe ich als Entwicklungschancen. Mit Aufmerksamkeit, Kreativität und schnellem Handeln finde ich Wege, sie zu meistern. Herausforderungen sind keine Hindernisse, sondern Gelegenheiten, zu wachsen und mein Potenzial zu entfalten.
+                Jede neue Herausforderung sehe ich als Chance zur Weiterentwicklung. Mit Achtsamkeit, Kreativität und schnellem Handeln finde ich Wege, diese zu meistern. Herausforderungen sind für mich keine Hindernisse, sondern Trittsteine, um zu wachsen und mein Potenzial zu entfalten.
             </p>
         </div>
     </header>
@@ -791,24 +805,27 @@
                 <h2>Über Mich</h2>
                 <div class="section-content-reveal reveal-on-scroll">
                     <p>
-                        Ingenieur Mauricio Mora, MSc., mit einer soliden Erfolgsbilanz im Projektmanagement von Automatisierung, Softwareentwicklung und EMSR-Techniken. Mein Fokus liegt auf der Anwendung von Kreativität, schneller Handlungsfähigkeit und akribischer Aufmerksamkeit, um Herausforderungen zu meistern, Wachstum zu fördern und mein volles Potenzial zu entfalten. Ich suche aktiv nach neuen Möglichkeiten, mich beruflich weiterzuentwickeln und Wert zu schaffen.
+                        Ingenieur Mauricio Mora, MSc., mit fundierter Erfahrung im Management von Automatisierungsprojekten, Softwareentwicklung und EMSR-Techniken. Mein Ansatz konzentriert sich auf die Anwendung von Kreativität, schnellem Handeln und akribischer Aufmerksamkeit, um Herausforderungen zu meistern, Wachstum zu fördern und mein volles Potenzial zu entfalten.
+                    </p>
+                    <p>
+                        Ich suche aktiv nach neuen Möglichkeiten, um mich beruflich weiterzuentwickeln und Mehrwert für Unternehmen zu schaffen.
                     </p>
                 </div>
             </section>
             <section id="skills">
-                <h2>Technische Kenntnisse</h2>
+                <h2>Fachkenntnisse</h2>
                 <div class="section-content-reveal reveal-on-scroll">
                     <div class="skills-container">
                         <div class="skill-category">
                             <h3>Software und Technologien</h3>
-                            <div class="skill-item"><span class="skill-name">MS Office, Access und Project</span> <span class="skill-level-text">(Niveau: 5/5)</span></div>
-                            <div class="skill-item"><span class="skill-name">SPS - Tia Portal</span> <span class="skill-level-text">(Niveau: 5/5)</span></div>
-                            <div class="skill-item"><span class="skill-name">MS Visual Basic</span> <span class="skill-level-text">(Niveau: 5/5)</span></div>
-                            <div class="skill-item"><span class="skill-name">C, C++</span> <span class="skill-level-text">(Niveau: 4/5)</span></div>
-                            <div class="skill-item"><span class="skill-name">HTML, Java, PHP</span> <span class="skill-level-text">(Niveau: 4/5)</span></div>
-                            <div class="skill-item"><span class="skill-name">Oracle - MySQL</span> <span class="skill-level-text">(Niveau: 3/5)</span></div>
-                            <div class="skill-item"><span class="skill-name">SAP</span> <span class="skill-level-text">(Niveau: 3/5)</span></div>
-                            <div class="skill-item"><span class="skill-name">Solid Edge</span> <span class="skill-level-text">(Niveau: 3/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">MS Office, Access und Project</span> <span class="skill-level-text">(Level: 5/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">SPS - Tia Portal</span> <span class="skill-level-text">(Level: 5/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">MS Visual Basic</span> <span class="skill-level-text">(Level: 5/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">C, C++</span> <span class="skill-level-text">(Level: 4/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">HTML, Java, PHP</span> <span class="skill-level-text">(Level: 4/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">Oracle - MySQL</span> <span class="skill-level-text">(Level: 3/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">SAP</span> <span class="skill-level-text">(Level: 3/5)</span></div>
+                            <div class="skill-item"><span class="skill-name">Solid Edge</span> <span class="skill-level-text">(Level: 3/5)</span></div>
                         </div>
                         <div class="skill-category">
                             <h3>Sprachen</h3>
@@ -831,14 +848,15 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>EMSR-Techniker <span class="arrow"></span></h3>
                             <p class="date">05.2024 - 11.2024</p>
                             <div class="timeline-item-content">
-                                <p class="company">VOGELBUSCH Biocommodities GmbH, (Vollzeit), Wien, Österreich</p>
-                                <p>Erstellung von Standarddokumentationen für Elektro- und Instrumentierungssysteme (Mess-, E/A-, Motoren-, Verbraucherlisten) und Überprüfung von P&I-Diagrammen, um die Konformität mit den Automatisierungsanforderungen sicherzustellen. Zeigte hohe Proaktivität und erledigte Aufgaben zu voller Zufriedenheit.</p>
+                                <p class="company">VOGELBUSCH Biocommodities GmbH, (Vollzeit), Viena, Austria</p>
+                                <p>Erstellung von Standarddokumentationen für elektrische und instrumentelle Systeme (Mess-, E/A-, Motoren-, Verbraucherlisten) und Überprüfung von P&I-Diagrammen zur Sicherstellung der Konformität mit Automatisierungsanforderungen.</p>
+                                <p>Zeigte hohe Proaktivität und erledigte Aufgaben zu voller Zufriedenheit.</p>
                                 <button class="document-btn" data-pdf-path="pdf/Dienstzeugnis Vogelbusch.pdf" aria-label="Empfehlungsschreiben ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
@@ -849,14 +867,15 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>Projektmanagement in Automatisierung und Softwareentwicklung <span class="arrow"></span></h3>
                             <p class="date">08.2021 - 03.2024</p>
                             <div class="timeline-item-content">
-                                <p class="company">PRIMETALS TECHNOLOGIES AUSTRIA GmbH, (Vollzeit), Linz, Österreich</p>
-                                <p>Schlüsselrolle bei der Architektur und Softwareentwicklung für Automatisierungs- und Elektrotechnikprojekte. Managte internationale technische Projekte, einschließlich Kundenkommunikation, Lieferantenverhandlung, Planung elektrischer Anlagen (MCC, PLCs, Transformatoren, Motoren, Sensoren, Umrichter) und Erstellung detaillierter technischer Dokumentationen (Spezifikationen, Standards, Layouts, Gerätelisten und Funktionsbeschreibungen). Führte Werksinspektionen und Abnahmen durch. Zeichnete sich durch Präzision, Zuverlässigkeit, Engagement und tiefes technisches Wissen aus, fand stets optimale Lösungen und trug maßgeblich zum Projekterfolg bei.</p>
+                                <p class="company">PRIMETALS TECHNOLOGIES AUSTRIA GmbH, (Vollzeit), Linz, Austria</p>
+                                <p>Schlüsselrolle in der Architektur und Softwareentwicklung für Automatisierungs- und Elektrotechnikprojekte. Managte internationale technische Projekte, einschließlich Kundenkommunikation, Lieferantenverhandlungen, Planung elektrischer Anlagen (MCC, PLCs, Transformatoren, Motoren, Sensoren, Umrichter) und Erstellung detaillierter technischer Dokumentation (Spezifikationen, Standards, Layouts, Gerätelisten und Funktionsbeschreibungen).</p>
+                                <p>Führte Inspektionen und Abnahmen in Fabriken durch. Ausgezeichnet durch Präzision, Zuverlässigkeit, Engagement und tiefes technisches Wissen, fand stets optimale Lösungen und trug maßgeblich zum Projekterfolg bei.</p>
                                 <button class="document-btn" data-pdf-path="pdf/Dienstzeugnis Primetals.pdf" aria-label="Empfehlungsschreiben ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
@@ -867,14 +886,15 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
-                            <h3>Automatisierungstechniker und Projektleiter <span class="arrow"></span></h3>
+                            <h3>Automatisierungstechniken und Projektleiter <span class="arrow"></span></h3>
                             <p class="date">06.2019 - 07.2021</p>
                             <div class="timeline-item-content">
-                                <p class="company">SPRINGER MASCHINENFABRIK GmbH, (Vollzeit), Linz, Österreich</p>
-                                <p>SPS-Softwareprogrammierer in der Sägewerksautomatisierung. Verantwortlich für die Teamerstellung von Programmen, die Inbetriebnahme beim Endkunden und den ordnungsgemäßen Abschluss der Projekte. Erwies sich als gewissenhafte, loyale und vielseitige Person in seinen Aufgaben.</p>
+                                <p class="company">SPRINGER MASCHINENFABRIK GmbH, (Vollzeit), Linz, Austria</p>
+                                <p>SPS-Softwareentwickler in der Sägewerksautomatisierung. Verantwortlich für die Teamerstellung von Programmen, die Inbetriebnahme beim Endkunden und den ordnungsgemäßen Projektabschluss.</p>
+                                <p>Erwies sich als gewissenhafte, loyale und vielseitige Person in seinen Funktionen.</p>
                                 <button class="document-btn" data-pdf-path="pdf/Dienstzeugnis Springer.pdf" aria-label="Empfehlungsschreiben ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
@@ -885,105 +905,110 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>Promotionstätigkeiten <span class="arrow"></span></h3>
                             <p class="date">01.2015 - 05.2019</p>
                             <div class="timeline-item-content">
-                                <p class="company">PLASMAPUNKT DONAUZENTRUM, (Freier Dienstvertrag), Wien, Österreich</p>
+                                <p class="company">PLASMAPUNKT DONAUZENTRUM, (Freier Dienstvertrag), Viena, Austria</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>Kälteanlagentechniker (Praktikum) <span class="arrow"></span></h3>
                             <p class="date">02.2019 - 02.2019</p>
                             <div class="timeline-item-content">
-                                <p class="company">Johnson Controls, (Praktikum), Wien, Österreich</p>
+                                <p class="company">Johnson Controls, (Praktikum), Viena, Austria</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>Hilfsmitarbeiter mit Logistik-Tätigkeiten <span class="arrow"></span></h3>
                             <p class="date">04.2016 - 01.2017</p>
                             <div class="timeline-item-content">
-                                <p class="company">WIENER GEWÄSSER (MA 45), (Vollzeit), Wien, Österreich</p>
+                                <p class="company">WIENER GEWÄSSER (MA 45), (Vollzeit), Viena, Austria</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>Sales Assistent-Manager <span class="arrow"></span></h3>
                             <p class="date">04.2015 - 11.2015</p>
                             <div class="timeline-item-content">
-                                <p class="company">SUBWAY (DON sub GmbH), (Saisonarbeit), Wien, Österreich</p>
+                                <p class="company">SUBWAY (DON sub GmbH), (Saisonarbeit), Viena, Austria</p>
                                 <ul>
-                                    <li>Lagerleiter, Verkauf und Kasse (viel Kundenkontakt).</li>
+                                    <li>Verantwortlich für Lager, Verkauf und Kasse (viel Kundenkontakt).</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
-                            <h3>Administrator des Fuhrparks <span class="arrow"></span></h3>
+                            <h3>Fuhrparkmanager <span class="arrow"></span></h3>
                             <p class="date">07.2012 - 01.2013</p>
                             <div class="timeline-item-content">
-                                <p class="company">SERVICIO GEOLÓGICO COLOMBIANO (INGEOMINAS), Bogotá, Kolumbien</p>
-                                <p>Meine Hauptaufgabe bestand darin, den ordnungsgemäßen Betrieb der gesamten Fahrzeugflotte sicherzustellen, die den Transport zwischen den verschiedenen Einrichtungen der Entität für Aktivitäten innerhalb der Stadt sowie für nationale Forschungs- und Notfalleinsätze gewährleistete. Während dieser Zeit gelang es mir, Programme in Visual Basic zu entwickeln, um die Ausgaben der Fahrzeuge, sowohl für Mechanik als auch für Kraftstoff, zu kontrollieren, was zu Einsparungen von 20 % führte. Darüber hinaus war ich für die Entwicklung und Überwachung des Fahrzeugkaufprozesses verantwortlich, wobei vier Pickups erfolgreich erworben wurden, die den Anforderungen der von uns durchgeführten Dienstleistungen entsprachen, und ich etablierte die Vertragsmodelle für zukünftige Fahrzeuganschaffungen, die für die Entität geeignet waren.</p>
+                                <p class="company">SERVICIO GEOLÓGICO COLOMBIANO (INGEOMINAS), Bogotá, Colombia</p>
+                                <p>Meine Hauptaufgabe war es, die ordnungsgemäße Funktion des gesamten Fuhrparks zu gewährleisten, der den Transport zwischen den verschiedenen Einrichtungen des Unternehmens sicherstellte.</p>
+                                <p>Dies umfasste Aktivitäten innerhalb der Stadt sowie für Untersuchungen oder Notfälle auf nationaler Ebene. Während dieser Zeit gelang es mir, Programme in Visual Basic zu entwickeln, um die Ausgaben für Fahrzeuge, sowohl für Mechanik als auch für Kraftstoff, zu kontrollieren, was zu einer Einsparung von 20% führte.</p>
+                                <p>Darüber hinaus war ich für die Entwicklung und Überwachung des Fahrzeugkaufprozesses verantwortlich. Ich erwarb erfolgreich vier Lastwagen, die den Anforderungen für unsere Dienstleistungen entsprachen, und etablierte die Vertragsmodelle für zukünftige Anschaffungen von für das Unternehmen geeigneten Fahrzeugen.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>Projektmanager <span class="arrow"></span></h3>
                             <p class="date">03.2011 - 12.2011</p>
                             <div class="timeline-item-content">
-                                <p class="company">FACTS S.A.S, Kolumbien</p>
-                                <p>Meine Hauptaufgabe bestand in der Entwicklung von Dashboards mit Xcelsius. In diesem Zeitraum gelang es mir, ein neues Multilayer-Dashboard-System zu entwickeln, das die Datenvisualisierung optimierte. Ich war auch ein Pionier bei der Erstellung von Dashboards, die Informationen direkt aus Textdateien (.txt) laden konnten, was ihnen die Flexibilität verlieh, mit jeder Datenbank zu arbeiten. Ergänzend dazu erstellte ich auch Berichte in Oracle-Datenbanken und extrahierte die Informationen im .txt-Format zur späteren Verknüpfung mit den Dashboards.</p>
+                                <p class="company">FACTS S.A.S, Colombia</p>
+                                <p>Meine Hauptaufgabe bestand darin, Dashboards mit Xcelsius zu entwickeln. In dieser Zeit gelang es mir, ein neues mehrschichtiges Dashboard-System zu entwickeln, das die Datenvisualisierung optimierte.</p>
+                                <p>Ich war auch ein Pionier bei der Erstellung von Dashboards, die Informationen direkt aus Textdateien (.txt) laden konnten, was ihnen die Flexibilität gab, mit jeder Datenbank zu arbeiten. Zur Ergänzung erstellte ich auch Berichte in Oracle-Datenbanken und extrahierte die Informationen im .txt-Format zur späteren Verknüpfung mit den Dashboards.</p>
                             </div>
                         </div>
                          <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>Projektmanager <span class="arrow"></span></h3>
                             <p class="date">05.2010 - 05.2011</p>
                             <div class="timeline-item-content">
-                                <p class="company">QP Consultores, Kolumbien</p>
-                                <p>Meine Aufgabe war die Entwicklung von Dashboards und Berichten für die Business Intelligence-Infrastruktur, die unter anderem Finanz-, Logistik- und Bestandsberichte zeigten. Während meiner Zeit dort gelang es mir, die Lieferzeiten erheblich zu verbessern, indem ich die vereinbarten Termine einhielt und somit die Compliance-Rate des Unternehmens erhöhte. Ich entwickelte auch neue Dashboard- und Berichtssysteme, die die Informationsabfrage wesentlich dynamischer gestalteten. Ein wesentlicher Erfolg war, dass ich durch die Verkettung von Informationen innerhalb der Oracle-Datenbanken die Verarbeitungszeiten der Dashboards erheblich reduzieren konnte.</p>
+                                <p class="company">QP Consultores, Colombia</p>
+                                <p>Meine Verantwortung war die Entwicklung von Dashboards und Berichten für die Business Intelligence-Infrastruktur, die Finanz-, Logistik- und Bestandsberichte und andere zeigten.</p>
+                                <p>Während meiner Zeit dort gelang es mir, die Lieferzeiten erheblich zu verbessern, die vereinbarten Termine einzuhalten und somit die Erfüllungsquote des Unternehmens zu erhöhen. Außerdem entwickelte ich neue Dashboard- und Berichtssysteme, die die Informationsabfrage wesentlich dynamischer gestalteten.</p>
+                                <p>Ein wichtiger Erfolg war, dass ich durch die Verkettung von Informationen innerhalb der Oracle-Datenbanken die Verarbeitungszeiten der Dashboards erheblich reduzieren konnte.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- The gear image path has been updated to the one provided by the user. -->
-                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a publicly accessible URL. -->
-                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙'; this.alt='Zahnrad';">
+                                <!-- If this image does not load, please ensure that 'sim/Engranaje.png' is a públicamente accesible URL ist. -->
+                                <img src="sim/Engranaje.png" alt="Zahnrad" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=⚙';this.alt='Engranaje';">
                             </div>
                             <h3>IT & Logistik Manager <span class="arrow"></span></h3>
                             <p class="date">2008 - 2010</p>
                             <div class="timeline-item-content">
-                                <p class="company">BRITISH AMERICAN TOBACCO (BAT), Bogotá, Kolumbien</p>
+                                <p class="company">BRITISH AMERICAN TOBACCO (BAT), Bogotá, Colombia</p>
                                 <ul>
-                                    <li>Manager der Reporting-Plattform mit SAP Business Intelligence und Xcelsius-Anwendung.</li>
+                                    <li>Manager der Berichts-Plattform mit SAP Business Intelligence und Xcelsius Anwendungen.</li>
                                 </ul>
                             </div>
                         </div>
@@ -994,32 +1019,41 @@
                 <h2>Akademische Ausbildung</h2>
                 <div class="section-content-reveal reveal-on-scroll">
                     <div class="timeline">
-                        <div class="timeline-item">
+                        <div class="timeline-item"> 
                             <div class="timeline-icon">
                                 <!-- SVG wurde auf das gewünschte Doktorhut-Bild geändert. -->
-                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓'; this.alt='Doktorhut';">
+                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓';this.alt='Birrete';">
                             </div>
                             <h3>Produktions- und Technologiemanagement MSc <span class="arrow"></span></h3>
                             <p class="date">09.2020 - 11.2023</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Zukunftsakademie Mostviertel und FH St. Pölten, Österreich</p>
+                                <p class="institution">Zukunftsakademie Mostviertel und FH St. Pölten, Austria</p>
                                 <p>
-                                    Der Masterstudiengang „Produktions- und Technologiemanagement (MSc)“ befähigt Absolventen, Produktionsprozesse effizient zu gestalten und technologische Innovationen in der Industrie zu implementieren. Ein zentrales Thema des Studiums ist das Projektmanagement, das die Studierenden befähigt, komplexe Vorhaben im Produktions- und Technologiesektor effektiv zu planen und zu steuern. Sie erlernen Techniken zur Projektstrukturierung, Ressourcen- und Zeitplanung sowie zum Risikomanagement, um dynamische und technisch anspruchsvolle Projekte erfolgreich umzusetzen.
+                                    Das Masterprogramm "Produktions- und Technologiemanagement (MSc)" befähigt Absolventen, Produktionsprozesse effizient zu gestalten und technologische Innovationen in der Industrie zu implementieren. Ein zentrales Thema des Studiums ist das Projektmanagement, das es den Studierenden ermöglicht, komplexe Projekte im Produktions- und Technologiesektor effektiv zu planen und zu steuern.
                                 </p>
                                 <p>
-                                    Darüber hinaus legt der Studiengang einen starken Fokus auf Lean Manufacturing-Methoden, die darauf abzielen, Effizienz und Qualität in der Produktion zu maximieren. Konzepte wie das Toyota-Produktionssystem, Kaizen und Six Sigma sind wichtige Bestandteile des Lehrplans. Diese Methoden dienen dazu, Verschwendung zu minimieren und die Produktivität zu steigern, indem sie kontinuierliche Verbesserungen in den Produktionsprozessen fördern. Die Studierenden lernen, Wertschöpfungsketten systematisch zu analysieren und nachhaltige Verbesserungsstrategien zu entwickeln, die hohe Qualität und niedrige Kosten gewährleisten.
+                                    Die Studierenden erlernen Techniken zur Projektstrukturierung, Ressourcen- und Zeitplanung sowie zum Risikomanagement, um dynamische und technisch anspruchsvolle Projekte erfolgreich umzusetzen.
                                 </p>
                                 <p>
-                                    Das Programm bereitet Absolventen auf Führungspositionen in produzierenden und technologieorientierten Unternehmen vor. Durch das Zusammenspiel von Projektmanagement und Lean Manufacturing entwickeln sie ein tiefes Verständnis für moderne Managementansätze, die in einer digitalisierten und globalisierten Industrie gefragt sind. Die Absolventen sind bestens qualifiziert, technologische Fortschritte gezielt in Produktionsabläufe zu integrieren und Wettbewerbsvorteile zu schaffen. Der Master „Produktions- und Technologiemanagement“ bietet somit eine praxisnahe und zukunftsorientierte Ausbildung, die sich an den Anforderungen einer sich ständig wandelnden Industrie orientiert und darauf abzielt, die Herausforderungen der modernen Produktion mit innovativen und nachhaltigen Lösungen zu begegnen.
+                                    Darüber hinaus legt das Programm einen starken Fokus auf Lean Manufacturing-Methoden, die darauf abzielen, die Effizienz und Qualität in der Produktion zu maximieren. Konzepte wie das Toyota-Produktionssystem, Kaizen und Six Sigma sind wichtige Bestandteile des Lehrplans. Diese Methoden dienen dazu, Verschwendung zu minimieren und die Produktivität zu steigern, indem kontinuierliche Verbesserungen der Produktionsprozesse gefördert werden. Die Studierenden lernen, Wertschöpfungsketten systematisch zu analysieren und nachhaltige Verbesserungsstrategien zu entwickeln, die hohe Qualität und niedrige Kosten gewährleisten.
                                 </p>
-                                <button class="document-btn" data-pdf-path="pdf/MSc_PTM_Mauricio_Mora.pdf" aria-label="Beschreibung des Masters ansehen">
+                                <p>
+                                    Das Programm bereitet Absolventen auf Führungspositionen in Produktions- und Technologieunternehmen vor. Durch das Zusammenspiel von Projektmanagement und Lean Manufacturing entwickeln sie ein tiefes Verständnis für moderne Managementansätze, die in einer digitalisierten und globalisierten Industrie gefragt sind. Absolventen sind bestens qualifiziert, technologische Fortschritte gezielt in Produktionsprozesse zu integrieren und Wettbewerbsvorteile zu schaffen.
+                                </p>
+                                <p>
+                                    Der Master "Produktions- und Technologiemanagement" bietet somit eine praxisorientierte und zukunftsweisende Ausbildung, die sich an den Anforderungen einer sich ständig weiterentwickelnden Industrie orientiert und darauf abzielt, die Herausforderungen der modernen Produktion mit innovativen und nachhaltigen Lösungen zu begegnen.
+                                </p>
+                                <button class="document-btn" data-pdf-path="pdf/MSc_PTM_Mauricio_Mora.pdf" aria-label="Masterbeschreibung ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
                                     </svg>
                                 </button>
                                 <p><strong>Masterarbeit:</strong></p>
                                 <p>
-                                    Meine Masterarbeit „Empirische Bewertung der Vorteile von MUL (Maßeinheitenumwandlung und Lineal) bei der Umrechnung von Maßeinheiten: Ein Vergleich mit der traditionellen Methode" evaluierte empirisch die Vorteile einer <span style="font-weight: bold;">von mir entwickelten</span> alternativen Methode (MUL) zur Umrechnung von Maßeinheiten im Vergleich zum traditionellen Ansatz. Durch eine detaillierte Analyse beleuchtete die Untersuchung die Wirksamkeit dieser neuen Methode beim Lernen und in der praktischen Anwendung und bietet eine wertvolle Perspektive für die Didaktik der Natur- und Ingenieurwissenschaften.
+                                    Meine Masterarbeit, "Empirische Bewertung der Vorteile von MUL (Maßeinheitenumwandlung und Lineal) bei der Umrechnung von Maßeinheiten: Ein Vergleich mit der traditionellen Methode", evaluierte empirisch die Vorteile einer von mir entwickelten alternativen Methode (MUL) <span style="font-weight: bold;">desarrollado por mí</span> zur Umrechnung von Maßeinheiten im Vergleich zum traditionellen Ansatz.
+                                </p>
+                                <p>
+                                    Durch eine detaillierte Analyse beleuchtete die Forschung die Wirksamkeit dieser neuen Methode im Lernen und in der praktischen Anwendung und bot eine wertvolle Perspektive für die Didaktik der Natur- und Ingenieurwissenschaften.
                                 </p>
                                 <button class="document-btn" data-pdf-path="pdf/20230824_Masterthesis_PTM_Mauricio_Mora.pdf" aria-label="Masterarbeit ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -1031,14 +1065,16 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                   <!-- SVG wurde auf das gewünschte Doktorhut-Bild geändert. -->
-                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓'; this.alt='Doktorhut';">
+                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓';this.alt='Birrete';">
                             </div>
                             <h3>Kälteanlagentechniker - Berufsausbildung <span class="arrow"></span></h3>
                             <p class="date">11.2017 - 04.2019</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Berufsförderungsinstitut (BFI), Wien, Österreich</p>
-                                <p>Durante esta intensa formación, adquirí una base sólida en el montaje, puesta en marcha y mantenimiento de sistemas de refrigeración y climatización, integrando conocimientos fundamentales de electrotecnia industrial. Fui capacitado en la instalación eléctrica de equipos frigoríficos y bombas de calor, incluyendo el trazado de tuberías, conexiones, pruebas de estanqueidad y control de fugas, siempre bajo las normas de seguridad y protección ambiental. Además, desarrollé competencias en el diseño y diagnóstico de circuitos y sistemas de control (PLC), incluyendo técnicas específicas de medición y regulación del ciclo frigorífico. Complementé mi perfil con habilidades prácticas en metalurgia –como torneado, fresado, soldadura y montaje de cuadros eléctricos–, así como la aplicación de sistemas neumáticos o electroneumáticos. La formación me preparó exitosamente para superar el examen final ("Lehrabschlussprüfung") en el módulo de electrotecnia y en la especialidad de refrigeración, posicionándome como un técnico cualificado para la operación, mantenimiento y optimización de instalaciones frigoríficas y de climatización en entornos industriales y comerciales.</p>
-                                <button class="document-btn" data-pdf-path="pdf/Lehrabschlus_Kaelteanlagentechniker_Mauricio_Mora.pdf" aria-label="Dokument Elektrotechniker Berufsausbildung ansehen">
+                                <p class="institution">Berufsförderungsinstitut (BFI), Viena, Austria</p>
+                                <p>Während dieser intensiven Ausbildung erwarb ich eine solide Grundlage in der Montage, Inbetriebnahme und Wartung von Kühl- und Klimaanlagen, wobei ich grundlegende Kenntnisse der industriellen Elektrotechnik integrierte.</p>
+                                <p>Ich wurde in der elektrischen Installation von Kühlanlagen und Wärmepumpen geschult, einschließlich der Rohrverlegung, Anschlüsse, Dichtigkeitsprüfung und Leckagekontrolle, unter Einhaltung der Sicherheits- und Umweltschutzvorschriften. Darüber hinaus entwickelte ich Kompetenzen im Design und der Diagnose von Stromkreisen und Steuerungssystemen (SPS), einschließlich spezifischer Mess- und Regelungstechniken des Kältekreislaufs.</p>
+                                <p>Ich ergänzte mein Profil mit praktischen Fähigkeiten in der Metallverarbeitung – wie Drehen, Fräsen, Schweißen und Montage von Schaltschränken – und der Anwendung von Pneumatik- oder Elektropneumatiksystemen. Die Ausbildung bereitete mich erfolgreich auf die Abschlussprüfung ("Lehrabschlussprüfung") im Modul Elektrotechnik und im Fachgebiet Kältetechnik vor und positionierte mich als qualifizierten Techniker für den Betrieb, die Wartung und die Optimierung von Kälteanlagen und Klimaanlagen in industriellen und kommerziellen Umgebungen.</p>
+                                <button class="document-btn" data-pdf-path="pdf/Lehrabschlus_Kaelteanlagentechniker_Mauricio_Mora.pdf" aria-label="Dokument der Kälteanlagentechniker Berufsausbildung ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
                                     </svg>
@@ -1048,14 +1084,17 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                   <!-- SVG wurde auf das gewünschte Doktorhut-Bild geändert. -->
-                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓'; this.alt='Doktorhut';">
+                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓';this.alt='Birrete';">
                             </div>
                             <h3>Elektrotechniker Berufsausbildung (Anlagen- und Betriebstechnik) <span class="arrow"></span></h3>
                             <p class="date">11.2017 - 04.2019</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Berufsförderungsinstitut (BFI), Wien, Österreich</p>
-                                <p>Durante esta intensa formación, adquirí una sólida base en electrotecnia aplicada a entornos industriales, con un enfoque en la instalación, mantenimiento y reparación de sistemas eléctricos y electromecánicos. Aprendí a trabajar con instalaciones complejas que integran componentes eléctricos, neumáticos e hidráulicos, aplicando criterios técnicos y las normativas de seguridad vigentes. Fui capacitado en la interpretación de esquemas eléctricos y planos técnicos, así como en la medición, análisis y diagnóstico de circuitos de corriente continua, alterna y trifásica, utilizando instrumentos profesionales y cumpliendo con las normas VDE. Paralelamente, desarrollé habilidades en automatización industrial a través del manejo de sistemas de control y la programación básica de PLC, aplicando conocimientos de medición, regulación y detección de fallas. La formación también abarcó fundamentos de fabricación mecánica (torno, fresa, CNC) y técnicas básicas de soldadura (electrodo, autógena y MIG/MAG), lo que me permitió complementar mi perfil técnico con habilidades prácticas de taller. Adicionalmente, abordé temas de sostenibilidad y energías renovables en la electrotecnia, integrando soluciones eficientes y respetuosas con el medio ambiente. Este curso me preparó para desempeñarme profesionalmente como electricista en instalaciones industriales, con una comprensión integral del funcionamiento de las plantas y sistemas operativos, y con competencias para asumir tareas técnicas y operativas dentro del mantenimiento y la optimización de procesos industriales.</p>
-                                <button class="document-btn" data-pdf-path="pdf/Lehrabschlus_Elektrotechniker_Mauricio_Mora.pdf" aria-label="Dokument Elektrotechniker Berufsausbildung ansehen">
+                                <p class="institution">Berufsförderungsinstitut (BFI), Viena, Austria</p>
+                                <p>Während dieser intensiven Ausbildung erwarb ich eine solide Grundlage in der Elektrotechnik für industrielle Umgebungen, wobei der Schwerpunkt auf der Installation, Wartung und Reparatur elektrischer und elektromechanischer Systeme lag.</p>
+                                <p>Ich lernte, mit komplexen Anlagen zu arbeiten, die elektrische, pneumatische und hydraulische Komponenten integrieren, unter Anwendung technischer Kriterien und gültiger Sicherheitsvorschriften. Ich wurde in der Interpretation von Stromlaufplänen und technischen Schemata sowie in der Messung, Analyse und Diagnose von Gleich-, Wechsel- und Drehstromkreisen geschult, wobei ich professionelle Instrumente verwendete und die VDE-Standards beachtete.</p>
+                                <p>Parallel dazu entwickelte ich Fähigkeiten in der industriellen Automatisierung durch den Umgang mit Steuerungssystemen und der grundlegenden Programmierung von SPS, wobei ich Kenntnisse in Messung, Regelung und Fehlererkennung anwendete. Die Ausbildung umfasste auch Grundlagen der mechanischen Fertigung (Drehen, Fräsen, CNC) und grundlegende Schweißtechniken (Elektrode, Autogen und MIG/MAG), was es mir ermöglichte, mein technisches Profil mit praktischen Werkstattfähigkeiten zu ergänzen.</p>
+                                <p>Ebenso befasste ich mich mit Themen der Nachhaltigkeit und erneuerbaren Energien in der Elektrotechnik und integrierte effiziente und umweltfreundliche Lösungen. Dieser Kurs bereitete mich darauf vor, professionell als Elektrotechniker in Industrieanlagen tätig zu sein, mit einer umfassenden Vision der Funktion von Anlagen und Betriebssystemen und mit Kompetenzen, sowohl technische als auch operative Aufgaben innerhalb der Wartung und Optimierung industrieller Prozesse zu übernehmen.</p>
+                                <button class="document-btn" data-pdf-path="pdf/Lehrabschlus_Elektrotechniker_Mauricio_Mora.pdf" aria-label="Dokument der Elektrotechniker Berufsausbildung ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
                                     </svg>
@@ -1065,15 +1104,17 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                   <!-- SVG wurde auf das gewünschte Doktorhut-Bild geändert. -->
-                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓'; this.alt='Doktorhut';">
+                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓';this.alt='Birrete';">
                             </div>
                             <h3>Masterstudium Maschinenbau <span class="arrow"></span></h3>
                             <p class="date">2003 - 2012</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Universidad de los Andes, Bogotá, Kolumbien</p>
-                                <p>Spezialisierung: Logistik und Produktionssteuerung.</p>
-                                <p>Durante mi carrera de Ingeniería Industrial, adquirí una formación integral orientada a la optimización de procesos en diversos ámbitos industriales y económicos. Desarrollé competencias en áreas clave como la producción, la logística, la gestión de la calidad y la cadena de suministro, enfocándome en mejorar la eficiencia operativa y reducir costos. Además, obtuve conocimientos aplicables en la investigación y desarrollo de tecnologías innovadoras, especialmente en automatización, robótica e inteligencia artificial. También fui capacitado en consultoría empresarial para asesorar a organizaciones en mejora de procesos, planificación estratégica y gestión de proyectos. Mi formación abarcó el liderazgo de equipos, la planificación de procesos productivos, la implementación de sistemas ERP y el desarrollo de soluciones sostenibles para la industria. Este estudio me preparó para roles de liderazgo responsables en un entorno económico globalizado.</p>
-                                <button class="document-btn" data-pdf-path="pdf/Masterstudium_Mascninenbau_Mauricio_Mora.pdf" aria-label="Dokument Masterstudium Maschinenbau ansehen">
+                                <p class="institution">Universidad de los Andes, Bogotá, Colombia</p>
+                                <p>Spezialisierung: Logistik und Produktionskontrolle.</p>
+                                <p>Während des Studiums in Wirtschaftsingenieurwesen erwarb ich eine umfassende Ausbildung zur Prozessoptimierung in verschiedenen Industrie- und Wirtschaftszweigen.</p>
+                                <p>Ich entwickelte Kompetenzen in Schlüsselbereichen wie Produktion, Logistik, Qualitätsmanagement und Supply Chain Management, wobei ich mich auf die Verbesserung der Betriebseffizienz und Kostensenkung konzentrierte.</p>
+                                <p>Darüber hinaus erwarb ich anwendbare Kenntnisse in Forschung und Entwicklung innovativer Technologien, insbesondere in Automatisierung, Robotik und künstlicher Intelligenz. Ich bildete mich auch in Unternehmensberatung weiter und unterstützte Organisationen bei der Prozessverbesserung, der strategischen Planung und dem Projektmanagement. Meine Ausbildung umfasste die Führung von Teams, die Planung von Produktionsprozessen, die Implementierung von ERP-Systemen und die Entwicklung nachhaltiger Lösungen für die Industrie. Dieser Studiengang bereitete mich auf verantwortungsvolle und führende Rollen in einem globalisierten Wirtschaftsumfeld vor.</p>
+                                <button class="document-btn" data-pdf-path="pdf/Masterstudium_Mascninenbau_Mauricio_Mora.pdf" aria-label="Dokument des Masterstudiums Maschinenbau ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
                                     </svg>
@@ -1083,31 +1124,32 @@
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                   <!-- SVG wurde auf das gewünschte Doktorhut-Bild geändert. -->
-                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓'; this.alt='Doktorhut';">
+                                <img src="sim/Birrete.png" alt="Doktorhut" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=🎓';this.alt='Birrete';">
                             </div>
                             <h3>Matura (Abitur) <span class="arrow"></span></h3>
                             <p class="date">2003</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Liceo Los Alpes, Cali, Kolumbien</p>
+                                <p class="institution">Liceo Los Alpes, Cali, Colombia</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="complementary-education">
-                <h2>Weiterbildung</h2>
+                <h2>Zusätzliche Ausbildung</h2>
                 <div class="section-content-reveal reveal-on-scroll">
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                 <!-- SVG wurde auf das gewünschte Buch-Bild geändert. -->
-                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖'; this.alt='Buch';">
+                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖';this.alt='Libro';">
                             </div>
-                            <h3>Einführungskurs KI <span class="arrow"></span></h3>
+                            <h3>Einführungskurs in KI <span class="arrow"></span></h3>
                             <p class="date">2025</p>
                             <div class="timeline-item-content">
                                 <p class="institution">BIG school</p>
-                                <p>Ich habe den Online-Einführungskurs in Künstliche Intelligenz mit Schwerpunkt auf ChatGPT, benutzerdefinierten GPTs und Make abgeschlossen. Während des Kurses erwarb ich grundlegende Kenntnisse über KI, das effektive Design von Prompts, die Erstellung von benutzerdefinierten Assistenten mit GPTs y la automatización de flujos de trabajo con Make.</p>
+                                <p>Ich habe den Online-Einführungskurs in Künstliche Intelligenz absolviert, der sich auf ChatGPT, personalisierte GPTs und Make konzentriert.</p>
+                                <p>Während des Kurses erwarb ich grundlegende Kenntnisse über KI, das effektive Design von Prompts, die Erstellung personalisierter Assistenten mit GPTs und die Automatisierung von Workflows mit Make.</p>
                                 <button class="document-btn" data-pdf-path="pdf/Certificado_IA_Mauricio_Mora.pdf" aria-label="KI-Zertifikat ansehen">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
@@ -1117,49 +1159,58 @@
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
-                                 <!-- SVG wurde auf das gewünschte Buch-Bild geändert. -->
-                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖'; this.alt='Buch';">
+                                 <!-- SVG wurde auf das gewünsшее Buch-Bild geändert. -->
+                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=�';this.alt='Libro';">
                             </div>
                             <h3>SCC Schulung (Safety Certificate for Contractors) <span class="arrow"></span></h3>
                             <p class="date">2021</p>
                             <div class="timeline-item-content">
-                                <p class="institution">TU Wien Österreich</p>
+                                <p class="institution">TU Wien Austria</p>
                                 <p>Dauer: 16 Stunden.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                  <!-- SVG wurde auf das gewünschte Buch-Bild geändert. -->
-                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖'; this.alt='Buch';">
+                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖';this.alt='Libro';">
                             </div>
                             <h3>Universitätskurs Modern Management - Projektmanagement <span class="arrow"></span></h3>
                             <p class="date">2016</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Universität Graz, Österreich</p>
-                                <p>Dauer: 192 Stunden.</p>
+                                <p class="institution">Universität Graz, Austria</p>
+                                <p>Ich habe ein Ausbildungsprogramm absolviert, das mir grundlegende Kenntnisse im Projekt- und Prozessmanagement vermittelte, um meine Fähigkeiten in der Implementierung, Ausführung und Kontrolle von Projekten zu erweitern. Während dieses Programms bildete ich mich in verschiedenen Schlüsselbereichen des Projektmanagements weiter.</p>
+                                <p>Ich erwarb eine solide Grundlage in den wesentlichen Prinzipien des Projektmanagements und lernte, die Arbeitsabläufe innerhalb von Projekten durch Prozessmanagement zu verstehen und zu optimieren. Ich entwickelte Fähigkeiten, die Zeit effektiv zu planen und potenzielle Risiken zu identifizieren, zu bewerten und zu mindern.</p>
+                                <p>Ich wurde auch in den notwendigen Techniken zur Überwachung und Kontrolle des Projektfortschritts geschult, um sicherzustellen, dass die Projekte innerhalb des Budgets und der Fristen bleiben. Darüber hinaus befasste ich mich mit Konzepten der Geschäftsplanung und der Investitionsbewertung, die für die Machbarkeit von Projekten entscheidend sind.</p>
+                                <p>Das Programm umfasste auch das Verständnis verschiedener Teamrollen und -modelle sowie Führungstechniken zur effektiven Führung von Projektteams. Ich wurde in agile Methoden wie Kanban und Scrum eingeführt und lernte, diese in der Zusammenarbeit und im Projektmanagement anzuwenden.</p>
+                                <p>Neben den technischen Kenntnissen wurden auch meine Soft Skills gestärkt, darunter effektive Kommunikation, Teamarbeit und die Fähigkeit, überzeugende Präsentationen zu halten. Dieses Programm, das in einem flexiblen Format angeboten wurde, ermöglichte mir ein selbstgesteuertes Studium und erleichterte die Integration der erworbenen Kenntnisse in meine beruflichen Verantwortlichkeiten.</p>
+                                <button class="document-btn" data-pdf-path="pdf/Abschlusszertifikat_Projektmanament_Mauricio_Mora.pdf" aria-label="Projektmanagement-Zertifikat ansehen">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                  <!-- SVG wurde auf das gewünschte Buch-Bild geändert. -->
-                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖'; this.alt='Buch';">
+                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖';this.alt='Libro';">
                             </div>
                             <h3>Lean-Manufacturing-Kurs <span class="arrow"></span></h3>
                             <p class="date">2013</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Brinks de Colombia, Bogotá, Kolumbien</p>
+                                <p class="institution">Brinks de Colombia, Bogotá, Colombia</p>
                                 <p>Dauer: 50 Stunden.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon">
                                  <!-- SVG wurde auf das gewünschte Buch-Bild geändert. -->
-                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null; this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖'; this.alt='Buch';">
+                                <img src="sim/Buch.png" alt="Buch" class="timeline-icon-img" onerror="this.onerror=null;this.src='https://placehold.co/30x30/0056b3/ffffff?text=📖';this.alt='Libro';">
                             </div>
                             <h3>Oracle Data Base Administrator Diplom <span class="arrow"></span></h3>
                             <p class="date">2010</p>
                             <div class="timeline-item-content">
-                                <p class="institution">Bogotá, Kolumbien</p>
+                                <p class="institution">Bogotá, Colombia</p>
                                 <p>Dauer: 152 Stunden.</p>
                             </div>
                         </div>
@@ -1171,62 +1222,37 @@
                 <div class="section-content-reveal reveal-on-scroll">
                     <div class="project-card">
                         <div class="project-header">
-                            <h3>Optimierung von Verfestigungsprozessen</h3>
+                            <h3>IT- und Vertriebsprojektleiter</h3>
                             <span class="arrow"></span>
                         </div>
                         <div class="project-content">
-                            <p><strong>Unternehmen:</strong> PRIMETALS TECHNOLOGIES AUSTRIA GmbH</p>
-                            <p><strong>Beschreibung:</strong> Ich konzentrierte mich auf die Verbesserung und Optimierung von Metallverfestigungsprozessen, einer kritischen Komponente in der industriellen Produktion.</p>
-                            <p><strong>Verwendete Technologien:</strong> Dieses Projekt umfasste die Manipulation und Verbesserung bestehender Steuerungssysteme, die hauptsächlich auf Siemens-Systemen und deren TIA Portal-Programmierumgebung basierten.</p>
-                            <p><strong>Beiträge y logros:</strong> Mi trabajo se centró en el desarrollo de bloques de programación específicos. Estos bloques fueron diseñados para mejorar la eficiencia general y el control preciso de los procesos de producción, lo que resultó en beneficios como la reducción de los tiempos de ciclo y una mejora en la calidad del producto final a través de un control más fino.</p>
+                            <p><strong>Firma:</strong> QP Consultores, Bogotá, Colombia</p>
+                            <p><strong>Zeitraum:</strong> 2010 - 2012</p>
+                            <ul>
+                                <li>Verantwortlich für das Management von IT-Systemprojekten.</li>
+                                <li>Datenbankverwaltung für Kunden.</li>
+                                <li>Aktive Beteiligung am Verkauf von IT-Systemen und -Dienstleistungen, Ermittlung der Kundenbedürfnisse und Vorschlagen von Lösungen.</li>
+                            </ul>
                         </div>
                     </div>
+                    <!-- Nuevo proyecto insertado aquí -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h3>Automatisiertes Bewässerungssystem</h3>
+                            <h3>Automatisierung der Migration von EPLAN-Variablen zu TIA Portal</h3>
                             <span class="arrow"></span>
                         </div>
                         <div class="project-content">
-                            <p><strong>Unternehmen:</strong> Springer Maschinenfabrik GmbH</p>
-                            <p><strong>Beschreibung:</strong> Ich leitete die Konzeption und Implementierung eines innovativen Bewässerungssystems zur Aufrechterhaltung der optimalen Feuchtigkeit großer Holzbruchmengen.</p>
-                            <p><strong>Verwendete Technologien:</strong> Die Automatisierung erfolgte mit Siemens PLCs, programmiert im TIA Portal. Ich entwickelte eine fortschrittliche Benutzeroberfläche mit Siemens SCADA-Plattformen, die über Touchscreens und externe Computer zugänglich sind.</p>
+                            <p><strong>Firma:</strong> Springer Maschinenfabrik GmbH</p>
+                            <p><strong>Beschreibung:</strong> Ich leitete die Entwicklung und Implementierung eines Tools zur Automatisierung und Standardisierung der Variablenmigration von EPLAN Electric P8 zu TIA Portal, wodurch der Konfigurationsprozess von Automatisierungsprojekten erheblich optimiert wurde.</p>
+                            <p><strong>Verwendete Technologien:</strong> Die Lösung wurde in Visual Basic for Applications (VBA) innerhalb von Microsoft Excel entwickelt, wobei die Fähigkeit von Excel zur Datenverwaltung und -manipulation genutzt wurde.</p>
                             <p><strong>Implementierte Funktionalitäten:</strong></p>
                             <ul>
-                                <li>Individuelle Auswahl und Gruppierung von Sprinklern.</li>
-                                <li>Präzise Einstellung der Bewässerungszeiten.</li>
-                                <li>Echtzeitüberwachung des Zustands und der Kapazität der Pumpen.</li>
-                                <li>Integration von Umweltdaten (Windrichtung) zur Optimierung der Bewässerung.</li>
-                                <li>Erfassung der Betriebsstunden für präventive Wartung.</li>
+                                <li>Automatische Extraktion und Verarbeitung von Variablen aus EPLAN.</li>
+                                <li>Standardisierte Generierung der Ordner- und Variablenstruktur im TIA Portal.</li>
+                                <li>Erstellung einer Excel-Datei, die für den direkten Import aller Variablen in TIA Portal bereit ist.</li>
+                                <li>Einhaltung von TIA Portal-spezifischen Benennungs- und Organisationsstandards.</li>
                             </ul>
-                            <p><strong>Herausforderung und Schlüssellösung:</strong> La mayor dificultad fue la capacidad limitada de las bombas, que impedía la activación simultánea de todos los rociadores. Concebí y programé un sistema flexible que permitía al cliente seleccionar grupos de rociadores y crear programas de riego personalizados con diferentes salidas y tiempos de ejecución, optimizando así el uso de los recursos.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Engagiertes Ehrenamt</h3>
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="project-content">
-                            <p><strong>Organisation:</strong> Tiergarten Schönbrunn, Wien, Österreich</p>
-                            <p><strong>Zeitraum:</strong> Seit 2016</p>
-                            <p>
-                                Kontinuierlicher ehrenamtlicher Mitarbeiter im Tiergarten Schönbrunn, der ein starkes Engagement für das Tierwohl und den Artenschutz zeigt. Diese Tätigkeit spiegelt Hingabe, Verantwortung und Leidenschaft für die Natur wider.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Logistik- und IT-Berater</h3>
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="project-content">
-                            <p><strong>Organisation:</strong> SERVICIO GEOLÓGICO COLOMBIANO, Bogotá, Kolumbien</p>
-                            <p><strong>Zeitraum:</strong> 2012 - 2013</p>
-                            <ul>
-                                <li>Entwicklung und Implementierung von Routensteuerungssystemen zur Optimierung der Fahrereffizienz.</li>
-                                <li>Management der vorbeugenden und korrigierenden Wartung einer Flotte von 45 Fahrzeugen (PKW und Pickups).</li>
-                                <li>Erstellung und Kontrolle von Budgets für die Logistik- und Transportabteilung.</li>
-                            </ul>
+                            <p><strong>Herausforderung und Schlüssellösung:</strong> Die größte Herausforderung war die begrenzte Pumpenkapazität, die es unmöglich machte, alle Sprinkler gleichzeitig zu aktivieren. Ich entwarf und programmierte ein flexibles System, das es dem Kunden ermöglichte, Gruppen von Sprinklern auszuwählen und maßgeschneiderte Bewässerungsprogramme mit verschiedenen Ausgängen und Laufzeiten zu erstellen, wodurch die Ressourcennutzung optimiert wurde.</p>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1235,30 +1261,75 @@
                             <span class="arrow"></span>
                         </div>
                         <div class="project-content">
-                            <p><strong>Unternehmen:</strong> QP Consultores</p>
-                            <p><strong>Beschreibung:</strong> Als Projektleiter leitete y managte ich die Entwicklung und Implementierung verschiedener Business Intelligence (BI)-Plattformen für una amplia gama de clientes.</p>
-                            <p><strong>Umfang und Zusammenarbeit:</strong> Este proyecto abarcó la estrecha coordinación y colaboración con equipos de desarrollo para asegurar que las soluciones de BI diseñadas no solo cumplieran con los requisitos técnicos, sino que también proporcionaran información valiosa y accionable para la toma de decisiones estratégicas de los clientes.</p>
-                            <p><strong>Projektlebenszyklus-Management:</strong> Fui responsable de la gestión integral de estos proyectos, lo que incluyó todas las fases del ciclo de vida:</p>
+                            <p><strong>Firma:</strong> QP Consultores</p>
+                            <p><strong>Beschreibung:</strong> Als Projektleiter leitete und managte ich die Entwicklung und Implementierung verschiedener Business Intelligence (BI)-Plattformen für eine Vielzahl von Kunden.</p>
+                            <p><strong>Umfang und Zusammenarbeit:</strong> Dieses Projekt umfasste die enge Koordination und Zusammenarbeit mit Entwicklerteams, um sicherzustellen, dass die entworfenen BI-Lösungen nicht nur die technischen Anforderungen erfüllten, sondern auch wertvolle und handlungsrelevante Informationen für die strategische Entscheidungsfindung der Kunden lieferten.</p>
+                            <p><strong>Projektlebenszyklus-Management:</strong> Ich war verantwortlich für das integrale Management dieser Projekte, das alle Phasen des Lebenszyklus umfasste:</p>
                             <ul>
                                 <li>Anfangsplanung: Definition von Zielen, Umfang und Ressourcen.</li>
-                                <li>Kommunikation: Aufrechterhaltung einer reibungslosen und effektiven Kommunikation mit allen Stakeholdern (Kunden, Entwicklungsteams).</li>
-                                <li>Inbetriebnahme und Betrieb: Überwachung der Implementierung und Sicherstellung der Funktionsfähigkeit der Plattformen.</li>
+                                <li>Kommunikation: Aufrechterhaltung einer fließenden und effektiven Kommunikation mit allen Stakeholdern (Kunden, Entwicklungsteams).</li>
+                                <li>Inbetriebnahme und Betrieb: Überwachung der Implementierung und Sicherstellung der Betriebsfähigkeit der Plattformen.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="project-card">
                         <div class="project-header">
-                            <h3>IT- und Vertriebsleiter</h3>
+                            <h3>Logistik- und IT-Berater</h3>
                             <span class="arrow"></span>
                         </div>
                         <div class="project-content">
-                            <p><strong>Unternehmen:</strong> QP Consultores, Bogotá, Kolumbien</p>
-                            <p><strong>Zeitraum:</strong> 2010 - 2012</p>
+                            <p><strong>Organisation:</strong> SERVICIO GEOLÓGICO COLOMBIANO, Bogotá, Colombia</p>
+                            <p><strong>Zeitraum:</strong> 2012 - 2013</p>
                             <ul>
-                                <li>Verantwortlich für das Projektmanagement von IT-Systemen.</li>
-                                <li>Datenbankverwaltung für Kunden.</li>
-                                <li>Aktive Beteiligung am Verkauf von IT-Systemen und -Dienstleistungen, Ermittlung von Kundenbedürfnissen und Vorschlagen von Lösungen.</li>
+                                <li>Entwicklung und Implementierung von Routensteuerungssystemen zur Optimierung der Fahrereffizienz.</li>
+                                <li>Verwaltung der präventiven und korrektiven Wartung einer Flotte von 45 Fahrzeugen (PKWs und Pickups).</li>
+                                <li>Erstellung und Kontrolle von Budgets für die Logistik- und Transportabteilung.</li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Engagiertes Ehrenamt</h3>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="project-content">
+                            <p><strong>Organisation:</strong> Tiergarten Schönbrunn, Viena, Austria</p>
+                            <p><strong>Zeitraum:</strong> Seit 2016</p>
+                            <p>
+                                Kontinuierliche ehrenamtliche Mitarbeit im Tiergarten Schönbrunn, die ein starkes Engagement für Tierschutz und Naturschutz zeigt. Diese Tätigkeit spiegelt Hingabe, Verantwortungsbewusstsein und Leidenschaft für die Natur wider.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Automatisiertes Bewässerungssystem</h3>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="project-content">
+                            <p><strong>Firma:</strong> Springer Maschinenfabrik GmbH</p>
+                            <p><strong>Beschreibung:</strong> Ich leitete das Design und die Implementierung eines innovativen Bewässerungssystems zur Aufrechterhaltung der optimalen Feuchtigkeit großer Holzmengen.</p>
+                            <p><strong>Verwendete Technologien:</strong> Die Automatisierung erfolgte mit Siemens SPS, programmiert im TIA Portal. Ich entwickelte eine fortschrittliche Benutzeroberfläche mit Siemens SCADA-Plattformen, zugänglich über Touchscreens und externe Computer.</p>
+                            <p><strong>Implementierte Funktionalitäten:</strong></p>
+                            <ul>
+                                <li>Benutzerdefinierte Auswahl und Gruppierung von Sprinklern.</li>
+                                <li>Genaue Anpassung der Bewässerungszeiten.</li>
+                                <li>Echtzeitüberwachung des Zustands und der Kapazität der Pumpen.</li>
+                                <li>Integration von Umweltdaten (Windrichtung) zur Optimierung der Bewässerung.</li>
+                                <li>Protokollierung der Betriebsstunden für die vorbeugende Wartung.</li>
+                            </ul>
+                            <p><strong>Herausforderung und Schlüssellösung:</strong> Die größte Herausforderung war die begrenzte Pumpenkapazität, die es unmöglich machte, alle Sprinkler gleichzeitig zu aktivieren. Ich entwarf und programmierte ein flexibles System, das es dem Kunden ermöglichte, Gruppen von Sprinklern auszuwählen und maßgeschneiderte Bewässerungsprogramme mit verschiedenen Ausgängen und Laufzeiten zu erstellen, wodurch die Ressourcennutzung optimiert wurde.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Optimierung von Erstarrungsprozessen</h3>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="project-content">
+                            <p><strong>Firma:</strong> PRIMETALS TECHNOLOGIES AUSTRIA GmbH</p>
+                            <p><strong>Beschreibung:</strong> Ich konzentrierte mich auf die Verbesserung und Optimierung der Erstarrungsprozesse von Metallen, eine kritische Komponente in der industriellen Produktion.</p>
+                            <p><strong>Verwendete Technologien:</strong> Dieses Projekt umfasste die Manipulation und Verbesserung bestehender Steuerungssysteme, die hauptsächlich auf Siemens-Systemen und deren TIA Portal-Programmierumgebung basierten.</p>
+                            <p><strong>Beiträge und Erfolge:</strong> Meine Arbeit konzentrierte sich auf die Entwicklung spezifischer Programmierbausteine. Diese Bausteine wurden entwickelt, um die Gesamteffizienz und die präzise Steuerung der Produktionsprozesse zu verbessern, was zu Vorteilen wie der Reduzierung von Zykluszeiten und der Verbesserung der Endproduktqualität durch feinere Kontrolle führte.</p>
                         </div>
                     </div>
                 </div>
@@ -1281,7 +1352,7 @@
                         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ing-mauricio-mora-msc" target="_blank">www.linkedin.com/in/ing-mauricio-mora-msc</a></p>
                     </div>
                     <div class="contact-info-item">
-                        <p><strong>Adresse:</strong> Maximilianstraße 74b/20, 3100 St. Pölten, Österreich</p>
+                        <p><strong>Adresse:</strong> Maximilianstraße 74b/20, 3100 St. Pölten, Austria</p>
                     </div>
                     <p>&copy; <span id="currentYear"></span> Mauricio Mora. Alle Rechte vorbehalten.</p>
                     <p>Lebenslauf aktualisiert: April 2025.</p>
@@ -1297,6 +1368,7 @@
         </div>
     </div>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCRIPT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
     <script type="text/javascript">
         (function() {
             // Hexagon animation
@@ -1477,9 +1549,9 @@
             const languageOptionsList = document.getElementById('language-options-list');
 
             const languages = [
-                { code: 'es', flag: '🇪🇸', name: 'Spanisch', url: 'https://motzimg84.github.io/CV_MMora_ES/' },
-                { code: 'en', flag: '🇺🇸', name: 'Englisch', url: 'https://motzimg84.github.io/CV_MMora_EN/' },
-                { code: 'de', flag: '🇦🇹', name: 'Deutsch', url: 'https://motzimg84.github.io/CV_MMora_DE/' }
+                { code: 'es', flag: 'sim/espana.png', flagEmojiFallback: '🇪🇸', name: 'Español', url: 'https://motzimg84.github.io/CV_MMora_ES/' },
+                { code: 'en', flag: 'sim/estados-unidos.png', flagEmojiFallback: '🇺🇸', name: 'English', url: 'https://motzimg84.github.io/CV_MMora_EN/' },
+                { code: 'de', flag: 'sim/austria.png', flagEmojiFallback: '🇦🇹', name: 'Deutsch', url: 'https://motzimg84.github.io/CV_MMora_DE/' }
             ];
 
             let currentLangCode = document.documentElement.lang; // Initialize with current HTML lang
@@ -1490,8 +1562,21 @@
                     if (lang.code !== currentLangCode) { // Only add if not the currently selected language
                         const listItem = document.createElement('li');
                         listItem.dataset.lang = lang.code;
-                        listItem.dataset.flag = lang.flag;
-                        listItem.textContent = `${lang.flag} ${lang.name}`;
+                        
+                        const img = document.createElement('img');
+                        img.src = lang.flag;
+                        img.alt = `${lang.name} Flag`;
+                        img.classList.add('dropdown-flag-icon'); // Add a class for styling
+                        // Add onerror for fallback to emoji
+                        img.onerror = function() {
+                            this.onerror = null; // Prevent infinite loop
+                            this.src = `https://placehold.co/20x20/a3a3a3/ffffff?text=${encodeURIComponent(lang.flagEmojiFallback)}`;
+                            this.alt = `${lang.name} (Error)`;
+                        };
+
+                        listItem.appendChild(img);
+                        listItem.appendChild(document.createTextNode(` ${lang.name}`)); // Add text after image
+
                         languageOptionsList.appendChild(listItem);
 
                         listItem.addEventListener('click', () => {
@@ -1503,10 +1588,21 @@
             }
 
             function updateFlagDisplay() {
+                currentFlagSpan.innerHTML = ''; // Clear previous content
                 const selectedLang = languages.find(lang => lang.code === currentLangCode);
                 if (selectedLang) {
-                    currentFlagSpan.textContent = selectedLang.flag;
-                    languageToggleBtn.setAttribute('aria-label', `Aktuelle Sprache: ${selectedLang.name}`);
+                    const img = document.createElement('img');
+                    img.src = selectedLang.flag;
+                    img.alt = `${selectedLang.name} Flag`;
+                    img.classList.add('inline-flag-icon'); // Add a class for styling
+                    // Add onerror for fallback to emoji
+                    img.onerror = function() {
+                        this.onerror = null; // Prevent infinite loop
+                        this.src = `https://placehold.co/24x24/a3a3a3/ffffff?text=${encodeURIComponent(selectedLang.flagEmojiFallback)}`;
+                        this.alt = `${selectedLang.name} (Error)`;
+                    };
+                    currentFlagSpan.appendChild(img);
+                    languageToggleBtn.setAttribute('aria-label', `Idioma actual: ${selectedLang.name}`);
                 }
             }
 
@@ -1541,3 +1637,4 @@
     </script>
 </body>
 </html>
+�
